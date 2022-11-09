@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://swietlicki.com/soap"
+           targetNamespace="http://swietlicki.com/soap"
+>
+
+    <xs:element name="getCityName">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cityName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="forecastDTO" type="tns:forecastDTO"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="forecastDTO">
+        <xs:sequence>
+            <xs:element name="cityName" type="xs:string"/>
+            <xs:element name="temperatureInCelsius" type="xs:double"/>
+            <xs:element name="weatherDescription" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

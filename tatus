@@ -1,0 +1,29 @@
+[33mcommit 1223ac3ce649486fc23e47936a800e14cc1a505f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mherokubranch[m[33m)[m
+Author: Krzysztof Swietlicki <krzysztof.swietlicki@atos.net>
+Date:   Tue Nov 8 15:14:55 2022 +0100
+
+    .gitignore modification
+
+[33mcommit c6826d9a81198de33a0797af248a212b0d4bca3f[m
+Author: Krzysztof Swietlicki <krzysztof.swietlicki@atos.net>
+Date:   Tue Nov 8 14:32:55 2022 +0100
+
+    Code refactoring(RestController)
+
+[33mcommit 9c1888326d962fbc0f0471b204d0e8953f749281[m
+Author: Krzysztof Swietlicki <krzysztof.swietlicki@atos.net>
+Date:   Fri Oct 28 16:41:32 2022 +0200
+
+    Modified SOAP endpoint: 1) correlationID reamins only in req/res body. 2) if request correlationID is empty then new exception is throw
+
+[33mcommit 7e2fa2b5e477b5edca138f1fb744c0ee21d5db3f[m
+Author: Krzysztof Swietlicki <krzysztof.swietlicki@atos.net>
+Date:   Thu Oct 27 15:22:21 2022 +0200
+
+    Added CorrealtionId in SOAP service
+
+[33mcommit afad5ed9155f5cf22b01cbfd9b47ac60c192a2e5[m
+Author: Krzysztof Swietlicki <krzysztof.swietlicki@atos.net>
+Date:   Tue Oct 25 15:35:07 2022 +0200
+
+    Added SOAP endpoint

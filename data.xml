@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<City>
+    <City name="warsaw" latitude='52.23' longitude='21.01'/>
+    <City name="cracow" latitude='50.06' longitude='19.94'/>
+    <City name="wroclaw" latitude='51.10' longitude='17.03'/>
+    <City name="gdansk" latitude='54.35' longitude='18.65'/>
+    <City name="london" latitude='51.51' longitude='-0.12'/>
+    <City name="toronto" latitude='43.65' longitude='-79.35'/>
+    <City name="sydney" latitude='-33.87' longitude='151.21'/>
+    <City name="dakar" latitude='14.72' longitude='-17.47'/>
+    <City name="moscow" latitude='55.75' longitude='37.62'/>
+    <City name="tokyo" latitude='35.65' longitude='139.84'/>
+    <City name="glasgow" latitude='55.865' longitude='-4.257'/>
+    <City name="kyiv" latitude='50.45' longitude='30.523'/>
+</City>
