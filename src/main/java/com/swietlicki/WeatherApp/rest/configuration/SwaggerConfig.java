@@ -23,8 +23,8 @@ public class SwaggerConfig {
     public Docket get() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .paths(PathSelectors. regex ( "^(?!/(error).*$).*$"))
-                .apis(RequestHandlerSelectors.basePackage("com.swietlicki.RestTemplateWeather"))
+                .paths(PathSelectors. regex ( "^(?!/(error).*$).*$" ))
+                .apis(RequestHandlerSelectors.basePackage("com.swietlicki.WeatherApp"))
                 .build()
                 .apiInfo(apiInfo());
     }

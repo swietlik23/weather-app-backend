@@ -1,0 +1,114 @@
+openapi: 3.0.3
+info:
+  title: WeatherForecast
+  description: |-
+    This is an application that, for a given city, will download data containing the current weather situation from the service [https://openweathermap.org](https://openweathermap.org/current).
+
+  contact:
+    email: krzysztof.swietlicki@atos.net
+  version: 1.0.0
+tags:
+  - name: city
+    description: Operations about cities objects
+  - name: forecast
+    description: Operations about forecasts for the cities
+paths:
+  /cities:
+    get:
+      tags:
+        - city
+      summary: Returns a list of all available cities
+      description: ''
+      operationId: getAllCities
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/City'          
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/City'
+  /forecasts/:
+    get:
+      tags:
+        - forecast
+      summary: Get forecast by city name
+      description: ''
+      operationId: getForecastsByCitiesNames
+      parameters:
+        - in: query
+          name: city
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+            minItems: 1
+          style: form
+          explode: true
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forecast'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Forecast'
+        '400':
+          description: Invalid cityName supplied
+        '404':
+          description: Forecast not found
+components:
+  schemas:
+    City:
+      type: object
+      properties:
+        name:
+          type: string
+          example: theCity
+        latitude:
+          type: number
+          format: double
+          example: 11.23
+        longitude:
+          type: number
+          format: double
+          example: 95.11
+      xml:
+        name: city
+    Forecast:
+      type: object
+      properties:
+        cityName:
+          type: string
+          example: theCity
+        temperature:
+          type: number
+          format: double
+          example: 20.1
+        currentWeather:
+          type: string
+          description: Current weather situation
+          example: sunny
+      xml:
+        name: forecast
+    ApiResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        type:
+          type: string
+        message:
+          type: string
+      xml:
+        name: '##default'

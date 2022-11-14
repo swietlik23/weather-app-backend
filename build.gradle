@@ -33,3 +33,32 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
+jar {
+
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+	manifest {
+		attributes 'Main-Class': 'com.swietlicki.WeatherApp.RestTemplateWeatherApplication'
+	}
+	from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+	exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+}
+//
+//processResources {
+//
+//	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+//
+//	filesMatching('application.yml') {
+//		expand(gradle.properties)
+//	}
+//}
+//
+//sourceSets {
+//
+//	main {
+//		resources {
+//			srcDirs "src/main/resources"
+//		}
+//	}
+//}
+

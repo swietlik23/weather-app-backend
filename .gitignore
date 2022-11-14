@@ -5,7 +5,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 application.yml
-swagger-config.yaml
+#swagger-config.yaml
 
 ### STS ###
 .apt_generated
